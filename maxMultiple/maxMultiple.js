@@ -1,6 +1,10 @@
 function maxMultiple(divisor, bound) {
+    let remainder = bound-(bound%divisor);
 
+    return remainder;
 }
+
+maxMultiple(2, 7);
 
 // Test 1
 // Input:
