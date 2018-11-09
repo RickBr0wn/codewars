@@ -1,10 +1,9 @@
-const expandedForm = num => {
-  return Array.from(String(num), Number)
+const expandedForm = num => Array.from(String(num))
   .reverse()
-  .map((num, index) => num * Math.pow(10, index))
+  .map((num, index) => num * (10 ** index))
   .filter(num => num !== 0)
   .reverse()
   .join(' + ')
-}
+
 
 expandedForm(70304)
