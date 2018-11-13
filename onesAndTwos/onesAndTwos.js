@@ -1,5 +1,1 @@
-const binaryArrayToNumber = arr => {
-    
-}
-
-binaryArrayToNumber([0, 0, 0, 1]) //?
+const binaryArrayToNumber = arr => parseInt(arr.join(''), 2)
