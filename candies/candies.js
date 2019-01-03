@@ -1,17 +1,17 @@
 function candies(children, sweets) {
-    let answer = (sweets/children);
+  let answer = sweets / children
 
-    if(answer === 1){
-        return children;
-    }
-    
-    if(answer < 1){
-        return 0;
-    }
-    return Math.floor(answer)*children;
+  if (answer === 1) {
+    return children
+  }
+
+  if (answer < 1) {
+    return 0
+  }
+  return Math.floor(answer) * children
 }
 
-candies(3, 10);
+candies(3, 10)
 
 // candies(3, 10); - 9
 // candies(1, 2); - 2
