@@ -1,7 +1,7 @@
 // Create a Vector object that supports addition, subtraction, dot products, and norms.
 
 //So, for example:
-//   var a = new Vector([1, 2, 3]);
+// var a = new Vector([1, 2, 3]);
 // var b = new Vector([3, 4, 5]);
 // var c = new Vector([5, 6, 7, 8]);
 
@@ -18,73 +18,73 @@
 // an equals method, to check that two vectors that have the same components are equal
 // Note: the test cases will utilize the user - provided equals method.
 
-const Vector = function (components) {
-  if (components === undefined || typeof components !== "object")
-    throw "Error, components must be an array";
-  const adder = (a, b) => a + b;
+const Vector = function(components) {
+  if (components === undefined || typeof components !== 'object')
+    throw 'Error, components must be an array'
+  const adder = (a, b) => a + b
 
   return {
     array: [...components],
 
-    validated: function (passedArray) {
+    validated: function(passedArray) {
       if (passedArray === undefined || passedArray.array === undefined)
-        throw "The array is undefined";
+        throw 'The array is undefined'
       if (passedArray.array.length === this.array.length) {
-        return passedArray.array.sort();
+        return passedArray.array.sort()
       } else {
-        throw "The Vectors must be of equal length";
+        throw 'The Vectors must be of equal length'
       }
     },
 
-    add: function (passedArray) {
-      passedArray = this.validated(passedArray);
-      let sum = new Array();
+    add: function(passedArray) {
+      passedArray = this.validated(passedArray)
+      let sum = new Array()
       return new Vector(
         passedArray.map((item, idx) => (sum[idx] = this.array[idx] + item))
-      );
+      )
     },
 
-    subtract: function (passedArray) {
-      passedArray = this.validated(passedArray);
-      let sum = new Array();
+    subtract: function(passedArray) {
+      passedArray = this.validated(passedArray)
+      let sum = new Array()
       return new Vector(
         passedArray.map((item, idx) => (sum[idx] = this.array[idx] - item))
-      );
+      )
     },
 
-    dot: function (passedArray) {
-      passedArray = this.validated(passedArray);
-      let sum = new Array();
+    dot: function(passedArray) {
+      passedArray = this.validated(passedArray)
+      let sum = new Array()
       return passedArray
         .map((item, idx) => (sum[idx] = this.array[idx] * item))
-        .reduce(adder);
+        .reduce(adder)
     },
 
-    norm: function () {
-      return this.array.map(item => Math.pow(item, 2)).reduce(adder);
+    norm: function() {
+      return this.array.map(item => Math.pow(item, 2)).reduce(adder)
     },
 
-    toString: function () {
-      return `(${this.array.toString()})`;
+    toString: function() {
+      return `(${this.array.toString()})`
     },
 
-    equals: function () {
-      passedArray = this.validated(passedArray);
-      let returnValue = true;
+    equals: function() {
+      passedArray = this.validated(passedArray)
+      let returnValue = true
       passedArray.map((item, idx) =>
         item != this.array[idx] ? (returnValue = false) : null
-      );
-      return returnValue;
+      )
+      return returnValue
     }
-  };
-};
+  }
+}
 
-const a = new Vector([1, 2]); //?	
-const b = new Vector([3, 4]); //?	
+const a = new Vector([1, 2]) //?
+const b = new Vector([3, 4]) //?
 
-a.add(b); //?	
-b.subtract(a); //?	
-a.dot(b); //?	
-a.norm(); //?	
-a.toString(); //?	
-a.equals(b); //?
+a.add(b) //?
+b.subtract(a) //?
+a.dot(b) //?
+a.norm() //?
+a.toString() //?
+a.equals(b) //?
