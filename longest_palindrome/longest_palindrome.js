@@ -18,17 +18,9 @@ palindrome = str =>
 longestPalindrome = function(str) {
   if (str.length === 0) return 0
   if (str.length === 1) return 1
-  let largestPalindromeLength = 0
-  for (let i = 0; i < str.length; i++) {
-    for (let j = str.length; j > 0; j--) {
-      if (
-        palindrome(str.substring(i, j)) &&
-        str.substring(i, j).length > largestPalindromeLength
-      )
-        largestPalindromeLength = str.substring(i, j).length
-    }
-  }
-  return largestPalindromeLength
+
+  
+  return str
 }
 
 console.log(longestPalindrome('a'), 1) //?
