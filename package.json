@@ -1,0 +1,29 @@
+{
+  "name": "codewars",
+  "version": "1.0.0",
+  "description": "A collection of completed 'Kata' challenges from the codewars website. https://www.codewars.com/users/RickBr0wn",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RickBr0wn/codewars.git"
+  },
+  "keywords": [
+    "code",
+    "wars",
+    "kata",
+    "challenges",
+    "javascript"
+  ],
+  "author": "Rick Brown",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RickBr0wn/codewars/issues"
+  },
+  "homepage": "https://github.com/RickBr0wn/codewars#readme",
+  "devDependencies": {
+    "jest": "^24.1.0"
+  }
+}
