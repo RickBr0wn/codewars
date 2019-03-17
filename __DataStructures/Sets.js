@@ -81,8 +81,8 @@ setB.add('c') //?
 setB.add('a') //?
 setB.add('d')
 console.log(setA.subset(setB))
-console.log(setA.intersection(setB).values())
-console.log(setB.difference(setA).values())
+console.log(setA.intersection(setB).values()) //?
+console.log(setB.difference(setA).values()) //?
 
 const setC = new Set() //?
 const setD = new Set() //?

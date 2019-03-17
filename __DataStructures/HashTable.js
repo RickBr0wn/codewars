@@ -61,10 +61,15 @@ let HashTable = function() {
 
 console.log(hash('quincy', 10))
 
-let ht = new HashTable()
-ht.add('beau', 'person')
-ht.add('fido', 'dog')
-ht.add('rex', 'dinosour')
-ht.add('tux', 'penguin')
-console.log(ht.lookup('tux'))
-ht.print()
+let ht = new HashTable() //?
+ht.add('beau', 'person') //?
+ht.add('fido', 'dog') //?
+ht.add('rex', 'dinosour') //?
+ht.add('tux', {
+  name: 'test',
+  address: {
+    town: 'ashford'
+  }
+}) //?
+console.log(ht.lookup('tux')) //?
+ht.print() //?
