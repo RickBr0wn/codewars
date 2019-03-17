@@ -8,7 +8,6 @@
 */
 function count(str) {
   let table = {}
-
   str === ''
     ? table
     : [...str].map(letter =>
@@ -16,7 +15,6 @@ function count(str) {
           ? table[letter]++
           : (table = { ...table, [letter]: 1 })
       )
-
   return table
 }
 
