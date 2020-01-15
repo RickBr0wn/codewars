@@ -13,17 +13,17 @@ Array size is at least 1.
 All numbers will be positive.
 Input >> Output Examples
 
-1- rowWeights([13, 27, 49]) ==> return (62, 27)
+1- rowWeights([13, 27, 49]) ==> return ([62, 27])
 Explanation:
 
 The first element 62 is the total weight of team 1, and the second element 27 is the total weight of team 2.
 
-2- rowWeights([50, 60, 70, 80]) ==> return (120, 140)
+2- rowWeights([50, 60, 70, 80]) ==> return ([120, 140])
 Explanation:
 
 The first element 120 is the total weight of team 1, and the second element 140 is the total weight of team 2.
 
-3- rowWeights([80]) ==> return (80, 0)
+3- rowWeights([80]) ==> return ([80, 0])
 Explanation:
 
 The first element 80 is the total weight of team 1, and the second element 0 is the total weight of team 2.
