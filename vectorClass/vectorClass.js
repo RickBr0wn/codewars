@@ -19,8 +19,8 @@
 // Note: the test cases will utilize the user - provided equals method.
 
 const Vector = function(components) {
-  if (components === undefined || typeof components !== 'object')
-    throw 'Error, components must be an array'
+  if (components === undefined || typeof components !== "object")
+    throw "Error, components must be an array"
   const adder = (a, b) => a + b
 
   return {
@@ -28,11 +28,11 @@ const Vector = function(components) {
 
     validated: function(passedArray) {
       if (passedArray === undefined || passedArray.array === undefined)
-        throw 'The array is undefined'
+        throw "The array is undefined"
       if (passedArray.array.length === this.array.length) {
         return passedArray.array.sort()
       } else {
-        throw 'The Vectors must be of equal length'
+        throw "The Vectors must be of equal length"
       }
     },
 
@@ -68,10 +68,10 @@ const Vector = function(components) {
       return `(${this.array.toString()})`
     },
 
-    equals: function() {
-      passedArray = this.validated(passedArray)
+    equals: function(passedArray) {
+      let arr = this.validated(passedArray)
       let returnValue = true
-      passedArray.map((item, idx) =>
+      arr.map((item, idx) =>
         item != this.array[idx] ? (returnValue = false) : null
       )
       return returnValue
@@ -79,12 +79,14 @@ const Vector = function(components) {
   }
 }
 
-const a = new Vector([1, 2]) //?
-const b = new Vector([3, 4]) //?
+module.exports = Vector
 
-a.add(b) //?
-b.subtract(a) //?
-a.dot(b) //?
-a.norm() //?
-a.toString() //?
-a.equals(b) //?
+// const a = new Vector([1, 2]) //?
+// const b = new Vector([3, 4]) //?
+
+// a.add(b) //?
+// b.subtract(a) //?
+// a.dot(b) //?
+// a.norm() //?
+// a.toString() //?
+// a.equals(b) //?
