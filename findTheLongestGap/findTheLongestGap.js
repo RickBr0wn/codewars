@@ -2,9 +2,9 @@ function gap(num) {
   const binary = num.toString(2)
   let counter = 0
   let highest = 0
-  const arr = [...binary] //?
+  const arr = [...binary]
   arr.map(num => {
-    if (num === '0') {
+    if (num === "0") {
       counter++
     } else {
       if (counter > highest) {
@@ -18,5 +18,4 @@ function gap(num) {
   return highest
 }
 
-gap(9) //?
-gap(529) //?
+module.exports = gap
