@@ -7,7 +7,7 @@
   "description": "A collection of completed 'Kata' challenges from the codewars website. https://www.codewars.com/users/RickBr0wn",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --watch"
   },
   "repository": {
     "type": "git",
