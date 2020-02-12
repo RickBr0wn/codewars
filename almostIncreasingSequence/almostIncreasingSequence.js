@@ -7,16 +7,20 @@ almostIncreasingSequence(sequence) = true. You can remove 3 from the array to ge
 * @returns `boolean` - Return true if it is possible to remove one element from the array in order to get a strictly increasing sequence, otherwise
 return false
 */
-function almostIncreasingSequence(sequence) {
-  for (let i = 0; i < sequence.length; i++) {
-    let mutatedArray = sequence.slice(0)
-    for (let j = 0; j < mutatedArray.length; j++) {
-      if (mutatedArray[j] + 1 === mutatedArray[j + 1]) {
-        return true
-      }
+module.exports = function almostIncreasingSequence(sequence) {
+  let isFirstNumber = true
+  for (var i = 0; i < sequence.length; i++) {
+    if (sequence[i] >= sequence[i + 1]) {
+      if (isFirstNumber) {
+        isFirstNumber = false
+        if (
+          sequence[i - 1] >= sequence[i + 1] &&
+          sequence[i] >= sequence[i + 2]
+        ) {
+          return false
+        }
+      } else return false
     }
   }
-  return false
+  return true
 }
-
-almostIncreasingSequence([2, 3, 5])
