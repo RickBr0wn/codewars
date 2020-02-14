@@ -23,14 +23,14 @@ Return inputString, with all the characters that were in parentheses reversed.
  */
 module.exports = function reverseInParentheses(s) {
   if (s.includes("(")) {
-    return reverseInParentheses(reverseOnce(s))
+    return reverseInParentheses(reverser(s))
   } else {
     return s
   }
 }
 
 // https://regexr.com/4u938
-function reverseOnce(s) {
+function reverser(s) {
   const regex = /\(([^()]*)\)/i
   return s.replace(
     regex,
