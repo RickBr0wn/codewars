@@ -22,22 +22,16 @@ Guaranteed constraints:
 Return inputString, with all the characters that were in parentheses reversed.
  */
 module.exports = function reverseInParentheses(s) {
-  if (s.includes("(")) {
-    return reverseInParentheses(reverser(s))
-  } else {
-    return s
-  }
-}
+  // https://regexr.com/4u938
+  const reverser = s =>
+    s.replace(
+      /\(([^()]*)\)/i,
+      /\(([^()]*)\)/i
+        .exec(s)[1]
+        .split("")
+        .reverse()
+        .join("")
+    )
 
-// https://regexr.com/4u938
-function reverser(s) {
-  const regex = /\(([^()]*)\)/i
-  return s.replace(
-    regex,
-    regex
-      .exec(s)[1]
-      .split("")
-      .reverse()
-      .join("")
-  )
+  return s.includes("(") ? reverseInParentheses(reverser(s)) : s
 }
