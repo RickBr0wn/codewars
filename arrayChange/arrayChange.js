@@ -18,7 +18,6 @@ The minimal number of moves needed to obtain a strictly increasing sequence from
 It's guaranteed that for the given test cases the answer always fits signed 32-bit integer type.
  */
 module.exports = function arrayChange(inputArray) {
-  console.debug(inputArray)
   let incrementor = 0
   for (let i = 0; i < inputArray.length - 1; i++) {
     while (inputArray[i] >= inputArray[i + 1]) {
