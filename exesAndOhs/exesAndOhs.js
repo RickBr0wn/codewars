@@ -8,7 +8,27 @@
  * XO("zzoo") => false
  */
 function XO(str) {
-  return str
+  if (str === '') {
+    return true
+  }
+  const xRegex = new RegExp('x', 'i')
+  const oRegex = new RegExp('o', 'i')
+  return str.split('').reduce(
+    ({ xCount, oCount }, letter, index) => {
+      if (letter.match(xRegex)) {
+        xCount++
+      } else if (letter.match(oRegex)) {
+        oCount++
+      }
+
+      if (index < str.length - 1) {
+        return { xCount, oCount }
+      } else {
+        return xCount == oCount
+      }
+    },
+    { xCount: 0, oCount: 0 }
+  )
 }
 
 module.exports = XO
