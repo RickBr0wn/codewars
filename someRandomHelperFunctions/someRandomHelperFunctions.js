@@ -1,3 +1,3 @@
-Array.prototype.removeAnItemFromAnArray = function(...forDeletion) {
-  return this.filter(item => !forDeletion.includes(item))
+Array.prototype.removeAnItemFromAnArray = function(...allOfTheArgs) {
+  return this.filter(item => !allOfTheArgs.includes(item))
 }
