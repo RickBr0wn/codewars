@@ -20,13 +20,16 @@
  * @param {*} a
  * @returns
  */
-const wordValue = a =>
-  a.map(
-    (item, index) =>
-      (index + 1) *
-      item
+function wordValue(a) {
+  return a.map(
+    (letter, index) =>
+      letter
         .replace(/\s/g, '')
         .split('')
-        .reduce((acc, char) => (acc += char.charCodeAt(0) - 96), 0)
+        .map(b => b.charCodeAt() - 96)
+        .reduce((acc, cur) => (acc += cur), 0) *
+      (index + 1)
   )
+}
+
 module.exports = wordValue
