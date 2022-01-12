@@ -1,15 +1,14 @@
-// function strCount(str, letter) {
-//   let counter = 0
-//   Array.from(str).map((item, index) => {
-//     if (item === letter) counter++
-//   })
-//   return counter
-// }
-
-function strCount(str, letter) {
+/**
+ * Create a function called that accepts 2 string arguments
+ * and returns an integer of the count of occurrences the 2nd
+ * argument is found in the first one.
+ *
+ * If no occurrences can be found, a count of 0 should be returned.
+ *
+ * @param {*} str
+ * @param {*} letter
+ * @returns
+ */
+module.exports = function strCount(str, letter) {
   return Array.from(str).filter(item => item === letter).length
 }
-
-console.log(strCount('Hello', 'o'), 1)
-console.log(strCount('Hello', 'l'), 2)
-console.log(strCount('', 'z'), 0)
