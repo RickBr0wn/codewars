@@ -19,10 +19,10 @@ Guaranteed constraints:
 [output] integer
  */
 module.exports = function commonCharacterCount(s1, s2) {
-  let arr2 = s2.split("")
+  let arr2 = s2.split('')
   let counter = 0
 
-  for (const firstLetter of s1.split("")) {
+  for (const firstLetter of s1.split('')) {
     for (const secondLetter of arr2) {
       if (firstLetter === secondLetter) {
         arr2.splice(arr2.indexOf(secondLetter), 1)
