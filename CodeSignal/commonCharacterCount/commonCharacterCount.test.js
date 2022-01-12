@@ -1,4 +1,4 @@
-const commonCharacterCount = require('./commonCharacterCount.js')
+const commonCharacterCount = require('./commonCharacterCount')
 
 describe('commonCharacterCount()', () => {
   it('should return the correct number of common characters', () => {
