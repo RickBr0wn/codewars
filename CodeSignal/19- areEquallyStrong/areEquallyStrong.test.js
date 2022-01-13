@@ -1,0 +1,20 @@
+const areEquallyStrong = require('./areEquallyStrong')
+
+describe('areEquallyStrong (fn)', () => {
+  it('should pass all basic tests', () => {
+    expect(areEquallyStrong(10, 15, 15, 10)).toBe(true)
+    expect(areEquallyStrong(15, 10, 15, 10)).toBe(true)
+    expect(areEquallyStrong(10, 15, 10, 9)).toBe(false)
+    expect(areEquallyStrong(10, 5, 5, 10)).toBe(true)
+    expect(areEquallyStrong(10, 15, 5, 20)).toBe(false)
+    expect(areEquallyStrong(10, 20, 10, 20)).toBe(true)
+    expect(areEquallyStrong(5, 20, 20, 5)).toBe(true)
+    expect(areEquallyStrong(20, 15, 5, 20)).toBe(false)
+    expect(areEquallyStrong(5, 10, 5, 10)).toBe(true)
+    expect(areEquallyStrong(1, 10, 10, 0)).toBe(false)
+    expect(areEquallyStrong(5, 5, 10, 10)).toBe(false)
+    expect(areEquallyStrong(10, 5, 10, 6)).toBe(false)
+    expect(areEquallyStrong(1, 1, 1, 1)).toBe(true)
+    expect(areEquallyStrong(0, 10, 10, 0)).toBe(true)
+  })
+})
