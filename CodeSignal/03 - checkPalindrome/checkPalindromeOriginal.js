@@ -20,8 +20,8 @@ module.exports = function palindromeRearranging(inputString) {
   let hashTable = {
     a: 2,
     b: 2,
-    c: 2
-  }[("a", "b", "c")]
+    c: 2,
+  }[('a', 'b', 'c')]
   let returnValue = true
   let hasBeenRemoved = false
 

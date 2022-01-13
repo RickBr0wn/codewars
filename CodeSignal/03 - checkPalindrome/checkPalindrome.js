@@ -16,12 +16,12 @@ Guaranteed constraints:
 
 Returns true if the characters of the inputString can be rearranged to form a palindrome, false otherwise.
  */
-module.exports = function palindromeRearranging(inputString) {
+module.exports = function checkPalindrome(inputString) {
   return (
     inputString
-      .split("")
+      .split('')
       .sort()
-      .join("")
-      .replace(/(\w)\1/g, "").length < 2
+      .join('')
+      .replace(/(\w)\1/g, '').length < 2
   )
 }
