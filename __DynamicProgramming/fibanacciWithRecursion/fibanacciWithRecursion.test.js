@@ -1,4 +1,4 @@
-const fibanacciWithRecursionAndHashMap = require('./fibanacciWithRecursionAndHashMap')
+const fibanacciWithRecursionAndHashMap = require('./fibanacciWithRecursion')
 
 describe('fibanacciWithRecursionAndHashMap (fn)', () => {
   it('should pass all tests', () => {
