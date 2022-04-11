@@ -23,15 +23,5 @@ Guaranteed constraints:
 
 true if inputString satisfies the IPv4 address naming rules, false otherwise.
  */
-module.exports = function isIPv4Address(inputString) {
-  const bitsArray = inputString.split(".")
-  const reduced = bitsArray.filter(
-    // TODO: improve to regex to include what the parseInt() is doing here.
-    str => parseInt(str, 10) < 256 && !/[A-Za-z]/g.test(str)
-  )
-
-  if (bitsArray.length !== 4 || reduced.length !== 4) {
-    return false
-  }
-  return true
-}
+module.exports = isIPv4Address = i =>
+  /^((25[0-5]|(2[0-4]|1[0-9]|[1-9]|)[0-9])(\.(?!$)|$)){4}$/g.test(i)
