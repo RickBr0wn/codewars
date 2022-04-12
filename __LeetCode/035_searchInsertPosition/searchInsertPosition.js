@@ -23,4 +23,3 @@ module.exports = function searchInsert(nums, target) {
 
   return left
 }
-// searchInsert([1,3,5,6], 5) -> 2
