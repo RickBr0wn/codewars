@@ -30,8 +30,8 @@ module.exports = function firstBadVersion(n, left = 1, right = n) {
   let mid = left + Math.floor((right - left) / 2)
 
   if (isBadVersion(mid)) {
-    firstBadVersion(n, left, mid)
+    return firstBadVersion(n, left, mid)
   } else {
-    firstBadVersion(n, mid + 1, right)
+    return firstBadVersion(n, mid + 1, right)
   }
 }
