@@ -14,10 +14,6 @@ function guess(num) {
 }
 
 module.exports = function guessNumberHigherOrLower(n, start = 1, end = n) {
-  if (n === 1 || n === 2) {
-    return 1
-  }
-
   if (guess(start) === 0) {
     return start
   }
