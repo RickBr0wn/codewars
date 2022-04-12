@@ -8,12 +8,11 @@
 
 // Input: n = 1, bad = 1
 // Output: 1
-const isBadVersion = require('./isBadVersion')
+const firstBadVersion = require('./isBadVersion')
 
-describe('isBadVersion (fn)', () => {
+describe('firstBadVersion (fn)', () => {
   it('should pass all basic tests', () => {
-    // expect(isBadVersion(5, 4)).toBe(4)
-    // expect(isBadVersion(1, 1)).toBe(1)
-    expect(true).toBe(true)
+    expect(firstBadVersion(5, 4)).toBe(4)
+    expect(firstBadVersion(1, 1)).toBe(1)
   })
 })
