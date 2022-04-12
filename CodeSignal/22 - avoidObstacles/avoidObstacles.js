@@ -21,7 +21,11 @@ Guaranteed constraints:
 The desired length.
  */
 module.exports = function avoidObstacles(inputArray) {
-  const newArray = inputArray.sort((a, b) => a - b)
+  const maximum = inputArray.sort((a, b) => a - b)[inputArray.length - 1]
 
-  return [newArray]
+  for (let i = 1; i <= maximum + 1; i++) {
+    if (inputArray.every(num => num % i !== 0)) {
+      return i
+    }
+  }
 }
