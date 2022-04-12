@@ -3,23 +3,25 @@
  * @param {number} target
  * @return {number}
  */
-module.exports = function searchInsert(nums, target) {
-  let left = 0
-  let right = nums.length - 1
-
-  while (left <= right) {
-    const center = Math.floor((right - left) / 2) + left
-
-    if (target == nums[center]) {
-      return center
-    }
-
-    if (target < nums[center]) {
-      right = center - 1
-    } else {
-      left = center + 1
-    }
+module.exports = function searchInsertPosition(
+  nums,
+  target,
+  left = 0,
+  right = nums.length - 1
+) {
+  if (left > right) {
+    return left
   }
 
-  return left
+  const center = Math.floor((right - left) / 2) + left
+
+  if (target == nums[center]) {
+    return center
+  }
+
+  if (target < nums[center]) {
+    return searchInsertPosition(nums, target, left, center - 1)
+  } else {
+    return searchInsertPosition(nums, target, center + 1, right)
+  }
 }
