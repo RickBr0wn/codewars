@@ -3,7 +3,7 @@
  * @param {number}
  * @returns {number[]}
  *
- * Solution -> time complexity: O(n)
+ * Time Complexity: O(n)
  *
  * Whiteboard:
  *
