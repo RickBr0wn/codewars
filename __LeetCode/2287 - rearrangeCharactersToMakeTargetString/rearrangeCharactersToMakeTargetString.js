@@ -4,28 +4,28 @@
  * @returns {number} number
  */
 module.exports = function rearrangeCharactersToMakeTargetString(s, target) {
-  const map = {}
-  const list = {}
+  const mapOfS = {}
+  const mapOfTarget = {}
   let counter = 100
 
   Array.from(s).forEach(item => {
-    if (map.hasOwnProperty(item)) {
-      map[item]++
+    if (mapOfS.hasOwnProperty(item)) {
+      mapOfS[item]++
     } else {
-      map[item] = 1
+      mapOfS[item] = 1
     }
   })
 
-  Array.from(target).map(item => {
-    if (list.hasOwnProperty(item)) {
-      list[item]++
+  Array.from(target).mapOfS(item => {
+    if (mapOfTarget.hasOwnProperty(item)) {
+      mapOfTarget[item]++
     } else {
-      list[item] = 1
+      mapOfTarget[item] = 1
     }
   })
 
-  for (const [key, value] of Object.entries(list)) {
-    counter = Math.min(counter, (map[key] || 0) / value)
+  for (const [key, value] of Object.entries(mapOfTarget)) {
+    counter = Math.min(counter, (mapOfS[key] || 0) / value)
   }
 
   return Math.floor(counter)
