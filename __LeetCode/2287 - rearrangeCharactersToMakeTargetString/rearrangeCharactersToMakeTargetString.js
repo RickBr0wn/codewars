@@ -8,14 +8,14 @@ module.exports = function rearrangeCharactersToMakeTargetString(s, target) {
   const mapOfTarget = {}
   let counter = 100
 
-  Array.from(s).forEach(item =>
-    mapOfS.hasOwnProperty(item) ? mapOfS[item]++ : (mapOfS[item] = 1)
+  Array.from(s).forEach(letter =>
+    mapOfS.hasOwnProperty(letter) ? mapOfS[letter]++ : (mapOfS[letter] = 1)
   )
 
-  Array.from(target).forEach(item =>
-    mapOfTarget.hasOwnProperty(item)
-      ? mapOfTarget[item]++
-      : (mapOfTarget[item] = 1)
+  Array.from(target).forEach(letter =>
+    mapOfTarget.hasOwnProperty(letter)
+      ? mapOfTarget[letter]++
+      : (mapOfTarget[letter] = 1)
   )
 
   for (const [key, value] of Object.entries(mapOfTarget)) {
