@@ -12,8 +12,8 @@ module.exports = function isomorphicStrings(s, t) {
     const charT = t[i]
 
     if (
-      (Object.keys(mapST).includes(charS) && mapST[charS] !== charT) ||
-      (Object.keys(mapTS).includes(charT) && mapTS[charT] !== charS)
+      (mapST.hasOwnProperty(charS) && mapST[charS] !== charT) ||
+      (mapTS.hasOwnProperty(charT) && mapTS[charT] !== charS)
     ) {
       return false
     }
